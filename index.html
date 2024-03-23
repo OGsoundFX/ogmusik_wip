@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700" rel="stylesheet">
@@ -10,15 +11,17 @@
 </head>
 <body>
   <div class="wrapper">
-    <!-- <iframe class="video" src="https://player.vimeo.com/video/97276391?h=4c4c6873e4&color=c9ff23&title=0&badge=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    <iframe class="video" src="./images/DAIKIN_Commercial_2017.mp4" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+    <!-- <iframe class="video" src="https://player.vimeo.com/video/97276391?h=4c4c6873e4&color=c9ff23&title=0&badge=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+    <video autoplay muted loop id="myVideo" poster="images/screenshot.png">
+      <source src="images/Background_Loop_small.mp4" type="video/mp4">
+    </video>
     <!-- <iframe id="player" src="https://www.youtube.com/embed/Qjz3-YJLXgY?si=ml2l1vv_2p7ROMmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-    <div id="player"></div>
+    <div id="player" class=""></div>
     <div class="button1">Films</div>
   </div>
-  <div autoplay loop poster="images/screenshot.png">
+  <!-- <div autoplay loop poster="images/screenshot.png">
     <iframe id="myVideo" src="https://www.youtube.com/embed/Qjz3-YJLXgY?si=ml2l1vv_2p7ROMmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+  </div> -->
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
   <script src="./javascript.js"></script>

@@ -1,5 +1,7 @@
 const button1 = document.querySelector(".button1")
 const video = document.querySelector(".video")
+const initialVideo = document.getElementById("myVideo")
+const playerElement = document.getElementById("player")
 
 // Testing Youtube API
 
@@ -8,7 +10,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '360',
         width: '640',
-        videoId: 'Qjz3-YJLXgY', // Replace VIDEO_ID_HERE with the ID of the YouTube video you want to play
+        videoId: '', // Replace VIDEO_ID_HERE with the ID of the YouTube video you want to play
         playerVars: {
             'origin': window.location.origin,
             'autoplay': 1, // Change to 1 if you want the video to autoplay
@@ -33,22 +35,16 @@ function onPlayerStateChange(event) {
   // Perform actions when the player's state changes
   if (event.data == YT.PlayerState.ENDED) {
     // Video has finished playing, trigger your action here
-    player.loadVideoById("Qjz3-YJLXgY");
-    // Call your function or perform any action you want here
-    // For example, displaying a message, loading another video, etc.
+    player.loadVideoById("bIvqCjz_850");
 }
 }
 
 button1.addEventListener("click", () => {
-  // video.src = "https://player.vimeo.com/video/85976762?h=8fb536da11&color=ff0179&title=0&portrait=0&badge=0"
-  // video.src = "https://www.youtube.com/embed/IUkuJu3Z91U?si=x5g8D_EbkN5H5aAy"
-  // console.log(player.setOption(videoId));
-  player.loadVideoById("bIvqCjz_850")
-  // setTimeout(() => {
-  //   var duration = player.getDuration();
-  //   console.log(duration);
-  //   setTimeout(() => {
-  //     player.loadVideoById("Qjz3-YJLXgY")
-  //   }, 5000)
-  // }, 2000)
+  initialVideo.style.display = "none"
+  setTimeout(() => {
+    playerElement.classList.remove("d-none")
+    // video.style.display = "block"
+  }, 2000)
+  // need to pass the video id to the loadVideoById method
+  player.loadVideoById("Qjz3-YJLXgY")
 })

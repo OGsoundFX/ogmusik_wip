@@ -42,3 +42,15 @@ body {
   height: 100vh;
   object-fit: cover;
 }
+
+#myVideo {
+  filter: brightness(0.7);
+  background-color: black;
+  position: relative;
+  z-index:0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
