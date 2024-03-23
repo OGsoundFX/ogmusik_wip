@@ -2,8 +2,17 @@ const button1 = document.querySelector(".button1")
 const video = document.querySelector(".video")
 const initialVideo = document.getElementById("myVideo")
 const playerElement = document.getElementById("player")
-
+let apiKey;
 // Testing Youtube API
+// Fetching API key from the server
+fetch('/api/key')
+  .then(response => response.json())
+  .then(data => {
+    apiKey = data.apiKey;
+  })
+  .catch(error => {
+    console.error('Error fetching API key:', error);
+  });
 
 var player;
 function onYouTubeIframeAPIReady() {
@@ -23,7 +32,8 @@ function onYouTubeIframeAPIReady() {
         },
         // Include your API key here
         // Replace YOUR_API_KEY_HERE with your actual API key
-        apiKey: 'AIzaSyBscTHsAjtR6KhQXjqC6nYgLhAzbFODzRE'
+        // apiKey: 'AIzaSyBscTHsAjtR6KhQXjqC6nYgLhAzbFODzRE'
+        apiKey: apiKey
     });
 }
 
