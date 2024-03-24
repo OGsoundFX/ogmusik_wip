@@ -31,6 +31,19 @@ body {
   align-items: center;
 }
 
+.menu {
+  font-size: 24px;
+  position: absolute;
+  z-index:1;
+  top:80px;
+  left: 36px;
+  color: 06bebd;
+  background-color: rgba(120, 120, 120, 0.5);
+}
+
+.menu-link {
+}
+
 #player {
   filter: brightness(0.7);
   background-color: black;
