@@ -1,4 +1,5 @@
 const button1 = document.querySelector(".button1")
+const menuLinks = document.querySelectorAll(".menu-link")
 const video = document.querySelector(".video")
 const initialVideo = document.getElementById("myVideo")
 const playerElement = document.getElementById("player")
@@ -48,6 +49,18 @@ function onPlayerStateChange(event) {
     player.loadVideoById("bIvqCjz_850");
 }
 }
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    initialVideo.style.display = "none"
+    setTimeout(() => {
+      playerElement.classList.remove("d-none")
+      // video.style.display = "block"
+    }, 2000)
+    // need to pass the video id to the loadVideoById method
+    player.loadVideoById(event.target.dataset.id)
+  })
+})
 
 button1.addEventListener("click", () => {
   initialVideo.style.display = "none"
