@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700" rel="stylesheet">
   <link rel="stylesheet" href="./stylesheet.css">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -18,9 +19,18 @@
     <!-- <iframe id="player" src="https://www.youtube.com/embed/Qjz3-YJLXgY?si=ml2l1vv_2p7ROMmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
     <div id="player"></div>
     <div class="menu">
-      <div data-id="Qjz3-YJLXgY" class="menu-link">Films</div>
-      <div data-id="Jabhxj1WELI" class="menu-link">Music</div>
-      <div data-id="yZUttskK8Bo" class="menu-link">About</div>
+      <div>
+        <span data-id="Qjz3-YJLXgY" class="menu-link" id="films"></span>
+      </div>
+      <div>
+        <span data-id="Jabhxj1WELI" class="menu-link" id="music"></span>
+      </div>
+      <div>
+        <span data-id="yZUttskK8Bo" class="menu-link" id="about"></span>
+      </div>
+      <div>
+        <span data-id="yZUttskK8Bo" class="menu-link" id="menu"></span>
+      </div>
     </div>
     <!-- <div class="button1">Films</div> -->
   </div>
@@ -29,6 +39,7 @@
   </div> -->
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="./javascript.js"></script>
+  <script src="./javascript/main.js"></script>
+  <script src="./javascript/typed.js"></script>
 </body>
 </html>
